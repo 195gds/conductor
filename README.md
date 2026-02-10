@@ -13,7 +13,7 @@
 
 ### 推奨ブラウザ
 
-Google Chrome を推奨します。
+WindowsではGoogle Chrome を推奨します。Microsoft Edgeではうまくいきませんでした。
 
 ## 主な構成
 
