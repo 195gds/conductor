@@ -34,9 +34,6 @@
             compatible = "zmk,behavior-mouse-key";
             label = "RIGHT_CLICK";
             #binding-cells = <0>;
-
-            // 右クリックは通常 MB2 に対応（ZMKの標準定義）
-
             bindings = <&mkp MB2>;
         };
     };
@@ -47,9 +44,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W      &kp E         &kp R                   &kp T                           &kp Y        &kp U                    &kp I      &kp O         &kp P
-&kp A             &kp S      &kp D         &kp F                   &kp G                           &kp H        &kp J                    &kp K      &kp L         &kp MINUS
+&studio_unlock    &kp S      &kp D         &kp F                   &kp G                           &kp H        &kp J                    &kp K      &kp L         &kp MINUS
 &mt LEFT_SHIFT Z  &kp X      &kp C         &kp V                   &kp B                           &kp N        &kp M                    &kp COMMA  &kp PERIOD    &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LCTRL  &kp LEFT_ALT  &mt LEFT_COMMAND LANG2  &lt 1 SPACE  &lt 2 BACKSPACE    &lt 3 ENTER  &studio_unlock          &kp C_VOL_DN  &kp C_VOLUME_UP
+&kp TAB           &kp LCTRL  &kp LEFT_ALT  &mt LEFT_COMMAND LANG2  &lt 1 SPACE  &lt 2 BACKSPACE    &lt 3 ENTER  &mt RIGHT_COMMAND LANG1             &kp C_VOL_DN  &kp C_VOLUME_UP
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
