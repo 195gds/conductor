@@ -49,10 +49,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT                       &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR
-&trans    &trans  &trans    &kp C_VOL_UP  &kp LS(LG(N3))                  &trans     &trans    &kp BSLH   &kp SEMI  &kp SQT
-&trans    &trans  &trans    &kp C_VOL_DN  &kp LS(LG(N4))                  &trans     &trans    &trans     &trans    &kp SLASH
-&kp ESC   &mo 6   &trans    &trans        &trans          &trans  &trans  &trans                          &trans    &trans
+&kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT                       &kp CARET  &kp AMPS  &kp ASTRK  &kp MINUS  &kp PLUS
+&trans    &trans  &trans    &kp C_VOL_UP  &kp LS(LG(N3))                  &trans     &trans    &kp BSLH   &kp SEMI   &kp SQT
+&trans    &trans  &trans    &kp C_VOL_DN  &kp LS(LG(N4))                  &trans     &trans    &trans     &trans     &kp SLASH
+&kp ESC   &mo 6   &trans    &trans        &trans          &trans  &trans  &trans                          &trans     &trans
             >;
         };
 
