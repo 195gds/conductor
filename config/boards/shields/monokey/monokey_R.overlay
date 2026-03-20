@@ -31,13 +31,12 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&zip_xy_scaler 1 1>, <&zip_temp_layer 4 100000>; // Scaler + AML
-    };
 
-    trackball_scroll_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        layers = <5>;
-        input-processors = <&zip_scroll_scaler 1 1>;
+        /* Scroll layer override */
+        scroll_layer {
+            layers = <5>;
+            input-processors = <&zip_scroll_scaler 1 1>;
+        };
     };
 
     chg_stat: chg_stat {
