@@ -14,7 +14,14 @@ manifest:
     - name: zmk
       remote: aratahorie
       revision: main
-      import: app/west.yml
+      import:
+        file: app/west.yml
+        name-blocklist:
+          - zmk-studio-messages
+    - name: zmk-studio-messages
+      remote: aratahorie
+      revision: d2034609859e14b0a2c46b55bd5e4dc51ad33da1
+      path: modules/msgs/zmk-studio-messages
     - name: zmk-pmw3610-driver
       remote: pite1222
       revision: main
