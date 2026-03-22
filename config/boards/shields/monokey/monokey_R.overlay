@@ -1,5 +1,6 @@
 #include "monokey.dtsi"
 #include <input/processors.dtsi>
+#include <dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <6>;
@@ -17,7 +18,10 @@
             ;
 };
 
-
+/* NFC pins as GPIO (replaces CONFIG_NFCT_PINS_AS_GPIOS=y) */
+&uicr {
+    nfct-pins-as-gpios;
+};
 
 // 非マウスキーでAML解除
 &zip_temp_layer {
@@ -35,7 +39,6 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&zip_temp_layer 4 100000>; // AML
-
     };
 
     chg_stat: chg_stat {
@@ -75,10 +78,13 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610";
+        compatible = "pixart,pmw3610-alt";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        scroll-layers = <5>;
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
     };
 };
